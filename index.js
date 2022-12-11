@@ -1,6 +1,7 @@
 // // // Week 1 - Variables
 
 //
+//
 // // // Data Types and Variables
 
 // // // Exercise 1. Simply declare a variable named 'emptyVariable'
