@@ -53,6 +53,7 @@
 // // // that its new value would be a string that says:
 // // // "The value of num1 is <num1 value> and is greater than 10".
 
+console.log("Number 1")
 function exercise1(num1) {
     let answer1 = "";
     // ------------------------------------------
@@ -82,6 +83,7 @@ function exercise1(num1) {
   // // // ie. if num2 has a value of 4 then the message should read:
   // // // "4 is even"
   
+  console.log("Problem 2:")
   function exercise2(num2) {
     let answer2;
   //   // --------------------------------------------

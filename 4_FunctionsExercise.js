@@ -84,17 +84,26 @@ console.log(discountGiven(25));
 // Then write some function calls you would use to test your function.
 console.log("This is exercise 6");
 
-let numTimesToPrint= 0;
-function printString(num, str){
-  for (let numTimesToPrint=0; numTimesToPrint < num; numTimesToPrint++){
-    console.log(str);
-  }
-}
+// let numTimesToPrint= 0;
+// function printString(num, str){
+//   for (let i=0; i < num; i++){
+//     console.log(str);
+//   }
+// }
+// printString(2, "hello");
 
-console.log(printString(2, "hello"));
 
 console.log(" ");
 
+
+let numTimesToPrint1= 0;
+function printString1(num, str){
+  let result= "";
+  for (let i=0; i < num; i++){
+    result += " " + str; 
+  }return result;
+}
+console.log(printString1(2, "hello"));
 
 //* Try this with a while loop
 
