@@ -120,8 +120,19 @@ console.log("");
 // Exercise 4. Write a function called removeFromString, which accepts a string, a starting index (number) and a number of characters to remove.
 // The function should return a new string with the characters removed.
 // Examples:
+// removeFromString('Sarah', 2, 2)// --> 'Sah'
 // removeFromString('Elie', 2, 2) // --> 'El'
 // removeFromString('Elie', 0, 1) // --> 'lie'
 // removeFromString('Hello School', 0, 6) // --> 'School'
 // removeFromString('Hello School', 2, 4) // --> 'HeSchool'
 // removeFromString('Hello School', 6, 400) // --> 'Hello '
+
+function removeFromString(str, startIndex, numCharsToRemove){
+    for (let i= 0; i<str.length; i++){
+        if (i !== startIndex && i !== startIndex + numCharsToRemove){
+            return str[i];
+        }
+    }
+}
+
+console.log(removeFromString("hello", 2, 3)) //--> he
