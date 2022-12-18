@@ -158,7 +158,7 @@ console.log("");
 // let arr3 = [1, 2];
 // indexOf(arr3, 10); // --> -1
 
-console.log("Exercise 5");
+console.log("Exercise 5:");
 
 function indexOf(arr, num){
     for (let i=0; i<arr.length; i++){
@@ -168,5 +168,48 @@ function indexOf(arr, num){
     } return -1;
 }
 
-console.log(indexOf([1,2,3,3,3,3], 3));
+console.log(indexOf([1,2,3,3,3,3], 3)); // --> 2
+console.log(indexOf([5, 10, 15, 20], 20)); //-->3
 console.log("");
+
+//_________________________________________________________________________________________
+
+// Exercise 6. Write a function called includes which accepts a collection, a value, and an optional starting index. The function should return true if the value exists in the collection when we search starting from the starting index. Otherwise, it should return false.
+// The collection can be a string, an array, or an object. If the collection is a string or array, the third parameter is a starting index for where to search from. If the collection is an object, the function searches for the value among values in the object; since objects have no sort order, the third parameter is ignored.
+// Examples:
+// includes([1, 2, 3], 1) // --> true
+// includes([1, 2, 3], 1, 2) // --> false
+// includes([1, 2, 3], 6) // --> false
+// includes({ 'a': 1, 'b': 2 }, 1) // --> true
+// includes({ 'a': 1, 'b': 2 }, 'a') // --> false
+// includes('abcd', 'b') // --> true
+// includes('abcd', 'e') // --> false
+// includes('abcd', 'a', 2) // --> false
+
+//My Notes: In this problem we first need to distingush if we are getting a string, an array, or an object. The issue is that an array is a type of object so we need to use instanceOf which will tell us if it is or not. So we first need to distinguish if its an array, since its a special type of objet.
+//
+
+console.log("Exercise 6:")
+
+function inOurCollection(collection, value, startingIndex){
+    if (collection instanceof Array || typeof collection === String){
+        for (let i= startingIndex; i<collection.length; i++){
+            if (collection[i] === value){
+                return true;
+            }
+        }
+    }else{
+        for (let key in collection){
+            if (collection[key]=== value){
+                return true;
+            }
+        }
+    }return false;
+}
+
+console.log(inOurCollection([1,2,3], 3, 1)); // --> Array, true 3 is part of the collection
+console.log(inOurCollection([1, 2, 3], 6)); // --> Array, false 6 is not part of the collection
+console.log(inOurCollection({ 'a': 1, 'b': 2 }, 1)); // --> Object, true, 1 is part of the colletion
+console.log(inOurCollection({ 'a': 1, 'b': 2 }, 7));// --> Object, false, 7 is not part of the collection
+console.log("");
+
