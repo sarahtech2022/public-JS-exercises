@@ -186,7 +186,10 @@ console.log("");
 // includes('abcd', 'e') // --> false
 // includes('abcd', 'a', 2) // --> false
 
-//My Notes: In this problem we first need to distingush if we are getting a string, an array, or an object. The issue is that an array is a type of object so we need to use instanceOf which will tell us if it is or not. So we first need to distinguish if its an array, since its a special type of objet.
+//My Notes: In this problem we first need to distingush if we are getting a string, an array, or an object. The issue is that an array is a type of object so we need to use instanceOf which will tell us if it is or not. So we first need to distinguish if its an array, since its a special type of objet.(We use instanceof for the array and typeof for the string)
+//If it is an array or string then our loop can start at the starting index and then see if the value at the index of our collection is equal to value and if so that means its in our collection so we return true! 
+//if its an objecy we need to use a for (let key in objectName) loop! then we access the value of the value at that object using objectname[key] and see if its equal to value, if it is it should also return true!
+//Lastly we have to remember to return false if all of these conditions above are not true (remmeber to return this outside of the the loops but still inside the function!)
 //
 
 console.log("Exercise 6:")
