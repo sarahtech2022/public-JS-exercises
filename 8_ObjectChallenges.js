@@ -113,6 +113,7 @@ function keys(obj){
   
       
   // We first made an empty array. Then we made a for loop so we could iterate through the array. Then we made an if statment which would check if the array at poistion i which is an OBJECT, using hasOwnProperty to check if the object had a property with that name. If that is true then we pushed the VALUE of the key on to our array! Else we returned undefined!!!!
+  // The second test case was not working so we used bracket instead of dot notation to fix it.
   
   
   
